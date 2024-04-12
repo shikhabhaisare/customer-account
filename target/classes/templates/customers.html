@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        form {
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+
+        <h1>Customers</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Customer Id</th>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="customer: ${customers}">
+                    <td th:utext="${customer.id}"></td>
+                    <td th:utext="${customer.name}"></td>
+                    <td th:utext="${customer.surname}"></td>
+                    <td>
+                        <form method="GET" th:action="@{/web/v1/customers/{id}(id=${customer.id})}">
+                            <input type="submit" value="Show Customer accounts" />
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

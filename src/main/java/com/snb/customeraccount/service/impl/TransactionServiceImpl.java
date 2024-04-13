@@ -21,13 +21,13 @@ public class TransactionServiceImpl implements TransactionService {
 
     private final TransactionRepository transactionRepository;
 
-    private final ObjectConverter objectSerializer;
+    private final ObjectConverter objectConverter;
 
 
-    public TransactionServiceImpl(TransactionRepository transactionRepository, ObjectConverter objectSerializer) {
+    public TransactionServiceImpl(TransactionRepository transactionRepository, ObjectConverter objectConverter) {
 		super();
 		this.transactionRepository = transactionRepository;
-		this.objectSerializer = objectSerializer;
+		this.objectConverter = objectConverter;
 	}
 
     /**
@@ -47,6 +47,6 @@ public class TransactionServiceImpl implements TransactionService {
 
         transaction = transactionRepository.save(transaction);
 
-        return objectSerializer.toTransactionDTO(transaction);
+        return objectConverter.toTransactionDTO(transaction);
     }
 }

@@ -42,7 +42,7 @@ public class AccountServiceImpl implements AccountService {
 
     private final TransactionService transactionService;
 
-    private final ObjectConverter objectSerializer;
+    private final ObjectConverter objectConverter;
     
     
 
@@ -55,13 +55,13 @@ public class AccountServiceImpl implements AccountService {
 	 */
 	public AccountServiceImpl(AccountRepository accountRepository, Validator validator,
 			CustomerRepository customerRepository, TransactionService transactionService,
-			ObjectConverter objectSerializer) {
+			ObjectConverter objectConverter) {
 		super();
 		this.accountRepository = accountRepository;
 		this.validator = validator;
 		this.customerRepository = customerRepository;
 		this.transactionService = transactionService;
-		this.objectSerializer = objectSerializer;
+		this.objectConverter = objectConverter;
 	}
 
 
@@ -105,7 +105,7 @@ public class AccountServiceImpl implements AccountService {
                         accountReqDTO.getInitialCredit(), INIT_TRANS_DESC));
             }
 
-            AccountDTO accountDTO = objectSerializer.toAccountDTO(account);
+            AccountDTO accountDTO = objectConverter.toAccountDTO(account);
             accountDTO.setTransactions(transactionDTOs);
 
             return accountDTO;

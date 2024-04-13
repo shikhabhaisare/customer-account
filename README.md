@@ -36,8 +36,6 @@ transactions of the accounts.
 ## CI/CD Tools
 - GitHub Actions
 - Maven
-- Docker
-- Docker Hub
 
 
 ## Run & Build 

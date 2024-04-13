@@ -73,7 +73,7 @@ INSERT INTO customers(name, surname) VALUES
   ('Trupti', 'Naik');
 
 
-**- Result**
+**-Result**
 
 
 

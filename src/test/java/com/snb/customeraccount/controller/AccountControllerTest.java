@@ -45,7 +45,7 @@ public class AccountControllerTest {
                 .build();
 
         AccountDTO accountDTO =  new AccountDTO.Builder()
-                .withAccountNumber("test account")
+                .withAccountNumber("test account ABN001")
                 .withBalance(credit)
                 .build();
 

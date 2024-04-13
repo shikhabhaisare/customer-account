@@ -63,7 +63,7 @@ transactions of the accounts.
 
    
 
-## Initial Database setup
+## Initial Setup to save customer data in DB
 
  **SQL Script:**
 
@@ -82,6 +82,7 @@ INSERT INTO customers(name, surname) VALUES
 | 1  | Neha   |  Roy	 |
 | 2  | Vishal |  Arora   |
 | 3  | Trupti |  Naik    |
+
 
 
 ## API EndPoints 

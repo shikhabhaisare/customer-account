@@ -28,4 +28,12 @@ public interface CustomerService {
     
     
     List<CustomerDTO> fetchAllCustomers();
+    
+    /**
+	 * @param name
+	 * @param surname
+	 * @return
+	 */
+    
+	CustomerDTO saveCustomer(String name, String surname);
 }

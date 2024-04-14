@@ -39,7 +39,7 @@ public class Transaction {
     @Column(name = "sending_date")
     private Instant sendingDate;
 
-    @ManyToOne()
+    @ManyToOne
     @NotNull
     @JoinColumn(name = "account_id")
     private Account account;

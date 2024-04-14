@@ -24,7 +24,7 @@ public class Customer {
             = "Customer surname must be between 3 and 50 characters")
     private String surname;
 
-    @OneToMany(fetch = FetchType.LAZY)
+    @OneToMany()
     @JoinColumn(name = "customer_id")
     private List<Account> accounts;
 

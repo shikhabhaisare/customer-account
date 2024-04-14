@@ -25,7 +25,7 @@ transactions of the accounts.
 
 ## Tech Stack
 
-- JDK 8
+- JDK 1.8
 - Maven
 - Spring Boot
 - H2 DB
